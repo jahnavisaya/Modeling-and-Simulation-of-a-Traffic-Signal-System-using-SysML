@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+  <uml:Model xmi:id="_HYcpsGLYEe-bja3PQ0I3TA" name="Traffic Light">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_He1lkGLYEe-bja3PQ0I3TA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_HfP1QGLYEe-bja3PQ0I3TA">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Hm0c4GLYEe-bja3PQ0I3TA">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/QUDV.uml#QUDV"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_HhG2cGLYEe-bja3PQ0I3TA" name="Interaction13"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_Hi4YEGLYEe-bja3PQ0I3TA" name="StateMachine14">
+      <region xmi:type="uml:Region" xmi:id="_Hk1f4GLYEe-bja3PQ0I3TA" name="Region1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Hk8NkGLYEe-bja3PQ0I3TA" name="Block15"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_UVm8UGLbEe-bja3PQ0I3TA" name="Requirements">
+      <packagedElement xmi:type="uml:Package" xmi:id="_7lpF0GLeEe-bja3PQ0I3TA" name="Non Functional Requirements">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_idkt0GLhEe-bja3PQ0I3TA">
+          <body>Dynamic Traffic Control: The system supports intersections with multiple two-way streets, dynamically switching lights based on vehicle presence.
+
+Round Robin Rotation: When all streets are busy, lights rotate in a fixed 30-second round-robin cycle, following a clockwise order (North, East, South, West).
+
+Main Street Priority: The main street remains green in the absence of side street traffic, ensuring smooth flow on the main thoroughfare.
+
+Initialization and Recovery: All lights flash red during startup or after a power failure until the system is fully operational.
+
+Side Street Management: If a vehicle is detected on a side street, it gets a green light for up to 60 seconds or 15 seconds after the last vehicle passes.
+
+Safety and Compliance: Only one street has a green light at any time, complying with safety regulations to prevent accidents.
+
+Verification: Test cases verify proper system operation, safety, and compliance under various traffic conditions.</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Package" xmi:id="_zqO5AGLfEe-bja3PQ0I3TA" name="Performance">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_IxpmkGL_Ee-FTI9DPYsaYw">
+            <body>&quot;During initialization, all street lights shall flash red until the system is fully operational.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_1yhbMGLfEe-bja3PQ0I3TA" name="Safety"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_3_ZicGLfEe-bja3PQ0I3TA" name="Regulatory"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_7GVeMGLfEe-bja3PQ0I3TA" name="Verification"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_21MHMGLhEe-bja3PQ0I3TA" name="Functional Requirements">
+        <packagedElement xmi:type="uml:Class" xmi:id="_SU8LcGLjEe-bja3PQ0I3TA" name="Side street Priority"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_952VYGLkEe-bja3PQ0I3TA" name="Requirement3"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="__ssMAGLkEe-bja3PQ0I3TA" name="Requirement4"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_MSU20GLlEe-bja3PQ0I3TA" name="Requirement5"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_oFcjAGLmEe-bja3PQ0I3TA" name="DeriveReqt5" client="_21MHMGLhEe-bja3PQ0I3TA _SU8LcGLjEe-bja3PQ0I3TA" supplier="_952VYGLkEe-bja3PQ0I3TA"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_NTE3QGLnEe-bja3PQ0I3TA" name="DeriveReqt6" client="_952VYGLkEe-bja3PQ0I3TA" supplier="__ssMAGLkEe-bja3PQ0I3TA"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_YsUAYGLnEe-bja3PQ0I3TA" name="DeriveReqt7" client="_MSU20GLlEe-bja3PQ0I3TA" supplier="__ssMAGLkEe-bja3PQ0I3TA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_fvtBEGLbEe-bja3PQ0I3TA" name="structural">
+      <packagedElement xmi:type="uml:Class" xmi:id="_9JuPEGLbEe-bja3PQ0I3TA" name="Block1"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_FkwscGMCEe-FTI9DPYsaYw" name="Traffic Signals System">
+        <packagedElement xmi:type="uml:Package" xmi:id="_PkOmQGMCEe-FTI9DPYsaYw" name="Devices"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Rj1GgGMCEe-FTI9DPYsaYw" name="Roles"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_S-iJ8GMCEe-FTI9DPYsaYw" name="Data"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ysa4AGMCEe-FTI9DPYsaYw" name="Bus Interface Unit"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_v5_zsGMCEe-FTI9DPYsaYw" name="Analog To Digital Convertor">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Nk26oWNyEe-X7KrX9s-fnw" name="bus interface unit" type="_ysa4AGMCEe-FTI9DPYsaYw" association="_Nk2TkGNyEe-X7KrX9s-fnw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Nk26o2NyEe-X7KrX9s-fnw" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_qH1n0GMCEe-FTI9DPYsaYw" name="Inductive Loop Dectector">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_F6774WNyEe-X7KrX9s-fnw" name="analog to digital convertor" type="_v5_zsGMCEe-FTI9DPYsaYw" association="_F66twGNyEe-X7KrX9s-fnw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F67742NyEe-X7KrX9s-fnw" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_mIk88GMCEe-FTI9DPYsaYw" name="Traffic signal Controller" classifierBehavior="_KgazEGOPEe-BLKx0INFxVw">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_8pWtsGNvEe-X7KrX9s-fnw" name="street light" type="_z_-KkGMCEe-FTI9DPYsaYw" association="_8o0iMGNvEe-X7KrX9s-fnw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8pYi4GNvEe-X7KrX9s-fnw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_BfttwmNyEe-X7KrX9s-fnw" name="inductive loop dectector" type="_qH1n0GMCEe-FTI9DPYsaYw" association="_BftGsGNyEe-X7KrX9s-fnw">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BfuU0WNyEe-X7KrX9s-fnw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_VkfDomNyEe-X7KrX9s-fnw" name="bus interface unit" type="_ysa4AGMCEe-FTI9DPYsaYw" aggregation="shared" association="_VkeckGNyEe-X7KrX9s-fnw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VkfqsGNyEe-X7KrX9s-fnw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VkfqsWNyEe-X7KrX9s-fnw" value="1"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_KgazEGOPEe-BLKx0INFxVw" name="StateMachine4">
+            <region xmi:type="uml:Region" xmi:id="_NXnCoGOPEe-BLKx0INFxVw" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_nKP6QGOPEe-BLKx0INFxVw" name="Trurn ON()" source="_VXHP0GOPEe-BLKx0INFxVw" target="_Wx7oAGOPEe-BLKx0INFxVw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_oLlbcGOPEe-BLKx0INFxVw" name="Initialization Complete()" source="_Wx7oAGOPEe-BLKx0INFxVw" target="_bcR3QGOPEe-BLKx0INFxVw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_o2fZoGOPEe-BLKx0INFxVw" name="Start Operational()" source="_bcR3QGOPEe-BLKx0INFxVw" target="_iH9sIGOPEe-BLKx0INFxVw"/>
+              <subvertex xmi:type="uml:State" xmi:id="_VXHP0GOPEe-BLKx0INFxVw" name="OFF"/>
+              <subvertex xmi:type="uml:State" xmi:id="_Wx7oAGOPEe-BLKx0INFxVw" name="Initializing"/>
+              <subvertex xmi:type="uml:State" xmi:id="_bcR3QGOPEe-BLKx0INFxVw" name="Flashing red"/>
+              <subvertex xmi:type="uml:State" xmi:id="_iH9sIGOPEe-BLKx0INFxVw" name="operational"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_z_-KkGMCEe-FTI9DPYsaYw" name="Street Light" classifierBehavior="_AIDboGOQEe-BLKx0INFxVw">
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_AIDboGOQEe-BLKx0INFxVw" name="red">
+            <region xmi:type="uml:Region" xmi:id="_CYYfgGOQEe-BLKx0INFxVw" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_VctsEGOQEe-BLKx0INFxVw" name="Time Lapsed()" source="_JrW94GOQEe-BLKx0INFxVw" target="_L1i9gGOQEe-BLKx0INFxVw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_XxJz4GOQEe-BLKx0INFxVw" name="Time Lapsed()" source="_L1i9gGOQEe-BLKx0INFxVw" target="_EWbgkGOQEe-BLKx0INFxVw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_Y5f8AGOQEe-BLKx0INFxVw" name="Car detected on side street" source="_EWbgkGOQEe-BLKx0INFxVw" target="_JrW94GOQEe-BLKx0INFxVw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_ib108GOQEe-BLKx0INFxVw" name="Start Flashing()" source="_EWbgkGOQEe-BLKx0INFxVw" target="_M6RJ4GOQEe-BLKx0INFxVw"/>
+              <subvertex xmi:type="uml:State" xmi:id="_EWbgkGOQEe-BLKx0INFxVw" name="red"/>
+              <subvertex xmi:type="uml:State" xmi:id="_JrW94GOQEe-BLKx0INFxVw" name="Green"/>
+              <subvertex xmi:type="uml:State" xmi:id="_L1i9gGOQEe-BLKx0INFxVw" name="Yellow"/>
+              <subvertex xmi:type="uml:State" xmi:id="_M6RJ4GOQEe-BLKx0INFxVw" name="Flashing Red"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_1XL1IGMCEe-FTI9DPYsaYw" name="Traffic Technician">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_O3JzgWNzEe-X7KrX9s-fnw" name="traffic signal controller" type="_mIk88GMCEe-FTI9DPYsaYw" association="_O3HXQGNzEe-X7KrX9s-fnw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O3KakGNzEe-X7KrX9s-fnw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O3KakWNzEe-X7KrX9s-fnw" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_6R3J8GMDEe-FTI9DPYsaYw" name="Traffic signal system Block">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Wl8rMGNzEe-X7KrX9s-fnw" name="traffic signal controller" type="_mIk88GMCEe-FTI9DPYsaYw" aggregation="shared" association="_Wl62AGNzEe-X7KrX9s-fnw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Wl8rMWNzEe-X7KrX9s-fnw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Wl9SQGNzEe-X7KrX9s-fnw" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_8o0iMGNvEe-X7KrX9s-fnw" memberEnd="_8pWtsGNvEe-X7KrX9s-fnw _8pZJ8GNvEe-X7KrX9s-fnw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8pURcGNvEe-X7KrX9s-fnw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8pVfkGNvEe-X7KrX9s-fnw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_8pZJ8GNvEe-X7KrX9s-fnw" name="traffic signal controller" type="_mIk88GMCEe-FTI9DPYsaYw" association="_8o0iMGNvEe-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_BftGsGNyEe-X7KrX9s-fnw" memberEnd="_BfttwmNyEe-X7KrX9s-fnw _BfuU0mNyEe-X7KrX9s-fnw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BfttwGNyEe-X7KrX9s-fnw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BfttwWNyEe-X7KrX9s-fnw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_BfuU0mNyEe-X7KrX9s-fnw" name="traffic signal controller" type="_mIk88GMCEe-FTI9DPYsaYw" association="_BftGsGNyEe-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_F66twGNyEe-X7KrX9s-fnw" memberEnd="_F6774WNyEe-X7KrX9s-fnw _F6775GNyEe-X7KrX9s-fnw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F67U0GNyEe-X7KrX9s-fnw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F6774GNyEe-X7KrX9s-fnw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_F6775GNyEe-X7KrX9s-fnw" name="inductive loop dectector" type="_qH1n0GMCEe-FTI9DPYsaYw" aggregation="composite" association="_F66twGNyEe-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Nk2TkGNyEe-X7KrX9s-fnw" memberEnd="_Nk26oWNyEe-X7KrX9s-fnw _Nk26pGNyEe-X7KrX9s-fnw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Nk2TkWNyEe-X7KrX9s-fnw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Nk26oGNyEe-X7KrX9s-fnw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Nk26pGNyEe-X7KrX9s-fnw" name="analog to digital convertor" type="_v5_zsGMCEe-FTI9DPYsaYw" association="_Nk2TkGNyEe-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_VkeckGNyEe-X7KrX9s-fnw" memberEnd="_VkfDomNyEe-X7KrX9s-fnw _VkfqsmNyEe-X7KrX9s-fnw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VkfDoGNyEe-X7KrX9s-fnw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VkfDoWNyEe-X7KrX9s-fnw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_VkfqsmNyEe-X7KrX9s-fnw" name="traffic signal controller" type="_mIk88GMCEe-FTI9DPYsaYw" association="_VkeckGNyEe-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_O3HXQGNzEe-X7KrX9s-fnw" visibility="public" memberEnd="_O3JzgWNzEe-X7KrX9s-fnw _O3LBoGNzEe-X7KrX9s-fnw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O3IlYGNzEe-X7KrX9s-fnw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O3JzgGNzEe-X7KrX9s-fnw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_O3LBoGNzEe-X7KrX9s-fnw" name="traffic technician" type="_1XL1IGMCEe-FTI9DPYsaYw" association="_O3HXQGNzEe-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Wl62AGNzEe-X7KrX9s-fnw" memberEnd="_Wl8rMGNzEe-X7KrX9s-fnw _Wl9SQWNzEe-X7KrX9s-fnw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Wl8EIGNzEe-X7KrX9s-fnw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Wl8EIWNzEe-X7KrX9s-fnw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Wl9SQWNzEe-X7KrX9s-fnw" name="traffic signal system block" type="_6R3J8GMDEe-FTI9DPYsaYw" association="_Wl62AGNzEe-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_hSSnMGN1Ee-X7KrX9s-fnw" name="Traffic Detector"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kkeJoGN1Ee-X7KrX9s-fnw" name="Pavement Invasive Detector">
+          <generalization xmi:type="uml:Generalization" xmi:id="_ux_tkGN1Ee-X7KrX9s-fnw" general="_hSSnMGN1Ee-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_n8VdUGN1Ee-X7KrX9s-fnw" name="Non pavement Invasive Detectot">
+          <generalization xmi:type="uml:Generalization" xmi:id="_wui50GN1Ee-X7KrX9s-fnw" general="_hSSnMGN1Ee-X7KrX9s-fnw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ZRxacGOCEe-R2df8P04LyA" name="Traffic Simulator" visibility="public">
+          <packagedElement xmi:type="uml:Activity" xmi:id="_0JBz8GOGEe-BLKx0INFxVw" name="Activity1" node="_Fv4gcGOIEe-BLKx0INFxVw _mNxIEGOIEe-BLKx0INFxVw _oWquQGOIEe-BLKx0INFxVw _G6Ks0GOJEe-BLKx0INFxVw _JHagIGOMEe-BLKx0INFxVw _Trf_YGOLEe-BLKx0INFxVw">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_rORYEGOJEe-BLKx0INFxVw" name="Vechile Generated" target="_mNxIEGOIEe-BLKx0INFxVw" source="_G6Ks0GOJEe-BLKx0INFxVw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_yWgwoGOKEe-BLKx0INFxVw" name="No vehicle Genearted" target="_Fv4gcGOIEe-BLKx0INFxVw" source="_G6Ks0GOJEe-BLKx0INFxVw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_-8Ei8GOKEe-BLKx0INFxVw" target="_G6Ks0GOJEe-BLKx0INFxVw" source="_Fv4gcGOIEe-BLKx0INFxVw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_U7Oh4GOLEe-BLKx0INFxVw" name="" target="_Trf_YGOLEe-BLKx0INFxVw" source="_mNxIEGOIEe-BLKx0INFxVw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_p8WyUGOLEe-BLKx0INFxVw" name="Event Injected Succesfully" target="_oWquQGOIEe-BLKx0INFxVw" source="_Trf_YGOLEe-BLKx0INFxVw">
+              <guard xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_495e4GOLEe-BLKx0INFxVw"/>
+            </edge>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_GaIagGOMEe-BLKx0INFxVw" name="Event Injection Failed" target="_mNxIEGOIEe-BLKx0INFxVw" source="_Trf_YGOLEe-BLKx0INFxVw"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_NbHxAGOMEe-BLKx0INFxVw" target="_JHagIGOMEe-BLKx0INFxVw" source="_Trf_YGOLEe-BLKx0INFxVw"/>
+            <node xmi:type="uml:AcceptEventAction" xmi:id="_Fv4gcGOIEe-BLKx0INFxVw" name="Generate Vehicle" incoming="_yWgwoGOKEe-BLKx0INFxVw" outgoing="_-8Ei8GOKEe-BLKx0INFxVw"/>
+            <node xmi:type="uml:AcceptEventAction" xmi:id="_mNxIEGOIEe-BLKx0INFxVw" name="Inject Event" incoming="_rORYEGOJEe-BLKx0INFxVw _GaIagGOMEe-BLKx0INFxVw" outgoing="_U7Oh4GOLEe-BLKx0INFxVw"/>
+            <node xmi:type="uml:AcceptEventAction" xmi:id="_oWquQGOIEe-BLKx0INFxVw" name="Check traffic Flow" incoming="_p8WyUGOLEe-BLKx0INFxVw"/>
+            <node xmi:type="uml:DecisionNode" xmi:id="_G6Ks0GOJEe-BLKx0INFxVw" name="vehivle generation decision" incoming="_-8Ei8GOKEe-BLKx0INFxVw" outgoing="_rORYEGOJEe-BLKx0INFxVw _yWgwoGOKEe-BLKx0INFxVw"/>
+            <node xmi:type="uml:DecisionNode" xmi:id="_Trf_YGOLEe-BLKx0INFxVw" incoming="_U7Oh4GOLEe-BLKx0INFxVw" outgoing="_p8WyUGOLEe-BLKx0INFxVw _GaIagGOMEe-BLKx0INFxVw _NbHxAGOMEe-BLKx0INFxVw"/>
+            <node xmi:type="uml:AcceptEventAction" xmi:id="_JHagIGOMEe-BLKx0INFxVw" name="Log error" incoming="_NbHxAGOMEe-BLKx0INFxVw"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Bh1IcGOEEe-BLKx0INFxVw" name="Traffic simulator">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_S3VbsGOEEe-BLKx0INFxVw" name="ArrivalPattern">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zfJl8GOFEe-BLKx0INFxVw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="__TCqwGOFEe-BLKx0INFxVw" name="hey"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_EpOFQGOGEe-BLKx0INFxVw" name="vehicle generator" type="_1wogYGOFEe-BLKx0INFxVw" association="_EpJz0GOGEe-BLKx0INFxVw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EpOsUGOGEe-BLKx0INFxVw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EpOsUWOGEe-BLKx0INFxVw" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_H9U6UmOGEe-BLKx0INFxVw" name="event injector" type="_4SPhgGOFEe-BLKx0INFxVw" association="_H9UTQGOGEe-BLKx0INFxVw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H9U6U2OGEe-BLKx0INFxVw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H9U6VGOGEe-BLKx0INFxVw" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_1wogYGOFEe-BLKx0INFxVw" name="Vehicle Generator"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4SPhgGOFEe-BLKx0INFxVw" name="Event Injector"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_EpJz0GOGEe-BLKx0INFxVw" memberEnd="_EpOFQGOGEe-BLKx0INFxVw _EpOsUmOGEe-BLKx0INFxVw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EpNeMGOGEe-BLKx0INFxVw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpNeMWOGEe-BLKx0INFxVw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_EpOsUmOGEe-BLKx0INFxVw" name="traffic simulator" type="_Bh1IcGOEEe-BLKx0INFxVw" association="_EpJz0GOGEe-BLKx0INFxVw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_H9UTQGOGEe-BLKx0INFxVw" memberEnd="_H9U6UmOGEe-BLKx0INFxVw _H9VhYGOGEe-BLKx0INFxVw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_H9U6UGOGEe-BLKx0INFxVw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_H9U6UWOGEe-BLKx0INFxVw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_H9VhYGOGEe-BLKx0INFxVw" name="traffic simulator" type="_Bh1IcGOEEe-BLKx0INFxVw" association="_H9UTQGOGEe-BLKx0INFxVw"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_NX6fsGMCEe-FTI9DPYsaYw" name="Traffic signal system"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_iR9icGLbEe-bja3PQ0I3TA" name="Behavioral">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_BxTeMGLcEe-bja3PQ0I3TA" name="Activity1"/>
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_fLHn4GOMEe-BLKx0INFxVw" name="Interaction2">
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_jrolsGOMEe-BLKx0INFxVw" name="Traffic signal controller" coveredBy="_t7pngGONEe-BLKx0INFxVw _M9JJoGOOEe-BLKx0INFxVw _dcaN4GONEe-BLKx0INFxVw _07hHMWOOEe-BLKx0INFxVw"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_mrqoMGOMEe-BLKx0INFxVw" name="Street line" coveredBy="_t7pngWONEe-BLKx0INFxVw"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_8N8d4GOMEe-BLKx0INFxVw" name="detector" coveredBy="_07hHMGOOEe-BLKx0INFxVw _M9JJoWOOEe-BLKx0INFxVw"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_VLNMsGONEe-BLKx0INFxVw" name="Traffic Technician" coveredBy="_dcZm0WONEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dcZm0WONEe-BLKx0INFxVw" name="Message6SendEvent" covered="_VLNMsGONEe-BLKx0INFxVw" message="_dcZm0GONEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t7pngGONEe-BLKx0INFxVw" name="Message9SendEvent" covered="_jrolsGOMEe-BLKx0INFxVw" message="_t7oZYGONEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_M9JJoGOOEe-BLKx0INFxVw" name="Message11SendEvent" covered="_jrolsGOMEe-BLKx0INFxVw" message="_M9IikGOOEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dcaN4GONEe-BLKx0INFxVw" name="Message6ReceiveEvent" covered="_jrolsGOMEe-BLKx0INFxVw" message="_dcZm0GONEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t7pngWONEe-BLKx0INFxVw" name="Message9ReceiveEvent" covered="_mrqoMGOMEe-BLKx0INFxVw" message="_t7oZYGONEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_07hHMGOOEe-BLKx0INFxVw" name="Message14SendEvent" covered="_8N8d4GOMEe-BLKx0INFxVw" message="_07f5EGOOEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_07hHMWOOEe-BLKx0INFxVw" name="Message14ReceiveEvent" covered="_jrolsGOMEe-BLKx0INFxVw" message="_07f5EGOOEe-BLKx0INFxVw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_M9JJoWOOEe-BLKx0INFxVw" name="Message11ReceiveEvent" covered="_8N8d4GOMEe-BLKx0INFxVw" message="_M9IikGOOEe-BLKx0INFxVw"/>
+        <message xmi:type="uml:Message" xmi:id="_dcZm0GONEe-BLKx0INFxVw" name="(Iniatialize0" messageSort="createMessage" receiveEvent="_dcaN4GONEe-BLKx0INFxVw" sendEvent="_dcZm0WONEe-BLKx0INFxVw"/>
+        <message xmi:type="uml:Message" xmi:id="_t7oZYGONEe-BLKx0INFxVw" name="(Flash red)" messageSort="createMessage" receiveEvent="_t7pngWONEe-BLKx0INFxVw" sendEvent="_t7pngGONEe-BLKx0INFxVw"/>
+        <message xmi:type="uml:Message" xmi:id="_M9IikGOOEe-BLKx0INFxVw" name="(check Traffic)" messageSort="asynchCall" receiveEvent="_M9JJoWOOEe-BLKx0INFxVw" sendEvent="_M9JJoGOOEe-BLKx0INFxVw"/>
+        <message xmi:type="uml:Message" xmi:id="_07f5EGOOEe-BLKx0INFxVw" name="Traffic Detected" messageSort="asynchCall" receiveEvent="_07hHMWOOEe-BLKx0INFxVw" sendEvent="_07hHMGOOEe-BLKx0INFxVw"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_mh-mIGLbEe-bja3PQ0I3TA" name="Parametric">
+      <packagedElement xmi:type="uml:Class" xmi:id="_GjyVwGLcEe-bja3PQ0I3TA" name="Block1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ypb_0GLeEe-bja3PQ0I3TA" name="use case">
+      <packagedElement xmi:type="uml:Package" xmi:id="_6CvZkGLnEe-bja3PQ0I3TA" name="Actors"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_8bHmMGLnEe-bja3PQ0I3TA" name="Use Cases"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_EKr58GLoEe-bja3PQ0I3TA" name="Traffic Technician"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_dantIGLoEe-bja3PQ0I3TA" name="vehicle"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_kvyj4GLoEe-bja3PQ0I3TA" name="Initialize system"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_n4qZUGLoEe-bja3PQ0I3TA" name="Switch to Main street Green"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_rHvkcGLoEe-bja3PQ0I3TA" name="Switch to side street Green"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_ty5jIGLoEe-bja3PQ0I3TA" name="Cycle Lights in Round Robin"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_wys8IGLoEe-bja3PQ0I3TA" name="Handle Emergency"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_nR_PUGLyEe-bja3PQ0I3TA" name="TT to IS" memberEnd="_nR_2YmLyEe-bja3PQ0I3TA _nR_2Y2LyEe-bja3PQ0I3TA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nR_2YGLyEe-bja3PQ0I3TA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nR_2YWLyEe-bja3PQ0I3TA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_nR_2YmLyEe-bja3PQ0I3TA" name="initialize system" type="_kvyj4GLoEe-bja3PQ0I3TA" association="_nR_PUGLyEe-bja3PQ0I3TA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_nR_2Y2LyEe-bja3PQ0I3TA" name="traffic technician" type="_EKr58GLoEe-bja3PQ0I3TA" association="_nR_PUGLyEe-bja3PQ0I3TA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_p58JAGLyEe-bja3PQ0I3TA" name="VC to SSG" memberEnd="_p59XImLyEe-bja3PQ0I3TA _p59-MGLyEe-bja3PQ0I3TA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_p59XIGLyEe-bja3PQ0I3TA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_p59XIWLyEe-bja3PQ0I3TA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_p59XImLyEe-bja3PQ0I3TA" name="switch to side street green" type="_rHvkcGLoEe-bja3PQ0I3TA" association="_p58JAGLyEe-bja3PQ0I3TA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_p59-MGLyEe-bja3PQ0I3TA" name="vehicle" type="_dantIGLoEe-bja3PQ0I3TA" association="_p58JAGLyEe-bja3PQ0I3TA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_w7OacGLyEe-bja3PQ0I3TA" name="VC to RR" memberEnd="_w7PBgmLyEe-bja3PQ0I3TA _w7PBg2LyEe-bja3PQ0I3TA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w7PBgGLyEe-bja3PQ0I3TA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w7PBgWLyEe-bja3PQ0I3TA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_w7PBgmLyEe-bja3PQ0I3TA" name="cycle lights in round robin" type="_ty5jIGLoEe-bja3PQ0I3TA" association="_w7OacGLyEe-bja3PQ0I3TA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_w7PBg2LyEe-bja3PQ0I3TA" name="vehicle" type="_dantIGLoEe-bja3PQ0I3TA" association="_w7OacGLyEe-bja3PQ0I3TA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4gMAsGLyEe-bja3PQ0I3TA" name="TT to HE" memberEnd="_4gMnwmLyEe-bja3PQ0I3TA _4gMnw2LyEe-bja3PQ0I3TA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4gMnwGLyEe-bja3PQ0I3TA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4gMnwWLyEe-bja3PQ0I3TA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_4gMnwmLyEe-bja3PQ0I3TA" name="handle emergency" type="_wys8IGLoEe-bja3PQ0I3TA" association="_4gMAsGLyEe-bja3PQ0I3TA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_4gMnw2LyEe-bja3PQ0I3TA" name="traffic technician" type="_EKr58GLoEe-bja3PQ0I3TA" association="_4gMAsGLyEe-bja3PQ0I3TA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_9uz5UGMAEe-FTI9DPYsaYw" name="IS to IB" client="_kvyj4GLoEe-bja3PQ0I3TA" supplier="_MSU20GLlEe-bja3PQ0I3TA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DQkRsGMBEe-FTI9DPYsaYw" name="IS to S" client="_kvyj4GLoEe-bja3PQ0I3TA" supplier="_1yhbMGLfEe-bja3PQ0I3TA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_GJ7rgGMBEe-FTI9DPYsaYw" name="SMSG to MSP" client="_n4qZUGLoEe-bja3PQ0I3TA" supplier="_952VYGLkEe-bja3PQ0I3TA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_LjUyEGMBEe-FTI9DPYsaYw" client="_rHvkcGLoEe-bja3PQ0I3TA" supplier="_1yhbMGLfEe-bja3PQ0I3TA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_R0spgGMBEe-FTI9DPYsaYw" name="CLRB to SSP" client="_ty5jIGLoEe-bja3PQ0I3TA" supplier="_SU8LcGLjEe-bja3PQ0I3TA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_VEcjAGMBEe-FTI9DPYsaYw" name="CLRR to P" client="_ty5jIGLoEe-bja3PQ0I3TA" supplier="_zqO5AGLfEe-bja3PQ0I3TA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_XyA8gGMBEe-FTI9DPYsaYw" name="HE to S" client="_wys8IGLoEe-bja3PQ0I3TA" supplier="_1yhbMGLfEe-bja3PQ0I3TA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ZwFLsGMBEe-FTI9DPYsaYw" name="HE to R" client="_wys8IGLoEe-bja3PQ0I3TA" supplier="_3_ZicGLfEe-bja3PQ0I3TA"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Hbhy4GLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HbnScGLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HeqmcGLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HerNgGLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HewGAGLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HexUIGLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HexUIWLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hex7MGLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Hex7MWLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hex7MmLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HeyiQGLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HeyiQWLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HeyiQmLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HezJUGLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HezJUWLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HezJUmLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HezwYGLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HezwYWLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_He0XcGLYEe-bja3PQ0I3TA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_He0XcWLYEe-bja3PQ0I3TA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Vhq7AGOEEe-BLKx0INFxVw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VhulYGOEEe-BLKx0INFxVw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <Blocks:Block xmi:id="_HlSy4GLYEe-bja3PQ0I3TA" base_Class="_Hk8NkGLYEe-bja3PQ0I3TA"/>
+  <Blocks:Block xmi:id="_9JzuoGLbEe-bja3PQ0I3TA" base_Class="_9JuPEGLbEe-bja3PQ0I3TA"/>
+  <Blocks:Block xmi:id="_Gj1ZEGLcEe-bja3PQ0I3TA" base_Class="_GjyVwGLcEe-bja3PQ0I3TA"/>
+  <Requirements:Requirement xmi:id="_SVCSEGLjEe-bja3PQ0I3TA" base_NamedElement="_SU8LcGLjEe-bja3PQ0I3TA" id="FR-001" base_Class="_SU8LcGLjEe-bja3PQ0I3TA"/>
+  <Requirements:Requirement xmi:id="_954xoGLkEe-bja3PQ0I3TA" base_NamedElement="_952VYGLkEe-bja3PQ0I3TA" id="FR-002" text="The main street shall remain green in the absence of traffic on side streets&#xD;&#xA;" base_Class="_952VYGLkEe-bja3PQ0I3TA"/>
+  <Requirements:Requirement xmi:id="__suoQGLkEe-bja3PQ0I3TA" base_NamedElement="__ssMAGLkEe-bja3PQ0I3TA" id="FR-003" text="The system shall switch the green light to a side street when a car is detected on that street&#xD;&#xA;" base_Class="__ssMAGLkEe-bja3PQ0I3TA"/>
+  <Requirements:Requirement xmi:id="_MSXTEGLlEe-bja3PQ0I3TA" base_NamedElement="_MSU20GLlEe-bja3PQ0I3TA" id="FR - 004" text="During initialization, all street lights shall flash red until the system is fully operational." base_Class="_MSU20GLlEe-bja3PQ0I3TA"/>
+  <Requirements:DeriveReqt xmi:id="_oFipoGLmEe-bja3PQ0I3TA" base_DirectedRelationship="_oFcjAGLmEe-bja3PQ0I3TA" base_Abstraction="_oFcjAGLmEe-bja3PQ0I3TA"/>
+  <Requirements:DeriveReqt xmi:id="_NTH6kGLnEe-bja3PQ0I3TA" base_DirectedRelationship="_NTE3QGLnEe-bja3PQ0I3TA" base_Abstraction="_NTE3QGLnEe-bja3PQ0I3TA"/>
+  <Requirements:DeriveReqt xmi:id="_YsWcoGLnEe-bja3PQ0I3TA" base_DirectedRelationship="_YsUAYGLnEe-bja3PQ0I3TA" base_Abstraction="_YsUAYGLnEe-bja3PQ0I3TA"/>
+  <Blocks:Block xmi:id="_mIoAQGMCEe-FTI9DPYsaYw" base_Class="_mIk88GMCEe-FTI9DPYsaYw"/>
+  <Blocks:Block xmi:id="_qH4EEGMCEe-FTI9DPYsaYw" base_Class="_qH1n0GMCEe-FTI9DPYsaYw"/>
+  <Blocks:Block xmi:id="_v6C3AGMCEe-FTI9DPYsaYw" base_Class="_v5_zsGMCEe-FTI9DPYsaYw"/>
+  <Blocks:Block xmi:id="_ysdUQGMCEe-FTI9DPYsaYw" base_Class="_ysa4AGMCEe-FTI9DPYsaYw"/>
+  <Blocks:Block xmi:id="_0AAm0GMCEe-FTI9DPYsaYw" base_Class="_z_-KkGMCEe-FTI9DPYsaYw"/>
+  <Blocks:Block xmi:id="_1XNqUGMCEe-FTI9DPYsaYw" base_Class="_1XL1IGMCEe-FTI9DPYsaYw"/>
+  <Blocks:Block xmi:id="_6R4_IGMDEe-FTI9DPYsaYw" base_Class="_6R3J8GMDEe-FTI9DPYsaYw"/>
+  <Blocks:Block xmi:id="_hSh3wGN1Ee-X7KrX9s-fnw" base_Class="_hSSnMGN1Ee-X7KrX9s-fnw"/>
+  <Blocks:Block xmi:id="_kkjCIGN1Ee-X7KrX9s-fnw" base_Class="_kkeJoGN1Ee-X7KrX9s-fnw"/>
+  <Blocks:Block xmi:id="_n8aV0GN1Ee-X7KrX9s-fnw" base_Class="_n8VdUGN1Ee-X7KrX9s-fnw"/>
+  <Blocks:Block xmi:id="_BkcXkGOEEe-BLKx0INFxVw" base_Class="_Bh1IcGOEEe-BLKx0INFxVw"/>
+  <Blocks:Block xmi:id="_1wsx0GOFEe-BLKx0INFxVw" base_Class="_1wogYGOFEe-BLKx0INFxVw"/>
+  <Blocks:Block xmi:id="_4SSk0GOFEe-BLKx0INFxVw" base_Class="_4SPhgGOFEe-BLKx0INFxVw"/>
+</xmi:XMI>
